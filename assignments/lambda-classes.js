@@ -35,8 +35,9 @@ class Student extends Person {
         this.favSubjects = studentAttributes.favSubjects;
     }
     listsSubjects() {
-        return `${this.favSubjects}`; 
-    }
+        console.log(this.favSubjects.split(',').join("\r\n")); 
+        
+    }  
     PRAssignment(subject) {
         return `${this.name} has submitted a PR for ${subject}`;
     }
@@ -86,7 +87,7 @@ const james = new Student ({
     gender: 'male',
     previousBackground: "Went to college for two years and dropped out",
     className: 'Web19',
-    favSubjects: 'JavaScript, HTML, CSS'
+    favSubjects: 'JavaScript, HTML, CSS',
 });
 
 const brian = new Student ({
