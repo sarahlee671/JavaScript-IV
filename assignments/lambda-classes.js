@@ -37,11 +37,11 @@ class Student extends Person {
     listsSubjects() {
         return `${this.favSubjects}`; 
     }
-    PRAssignment(student, subject) {
-        return `${student.name} has submitted a PR for ${subject}`;
+    PRAssignment(subject) {
+        return `${this.name} has submitted a PR for ${subject}`;
     }
-    sprintChallenge(student, subject) {
-        return `${student.name} has begun sprint challenge on ${subject}.`;
+    sprintChallenge(subject) {
+        return `${this.name} has begun sprint challenge on ${subject}.`;
     }
 }
 
@@ -89,13 +89,32 @@ const james = new Student ({
     favSubjects: 'JavaScript, HTML, CSS'
 });
 
+const brian = new Student ({
+    name: 'Brian',
+    age: 22,
+    location: 'Florida',
+    gender: 'male',
+    previousBackground: 'Professional Handler for a Chihuahua who is a two time winner of the American Kennel Club',
+    className: 'CS12',
+    favSubjects: 'Java, Python'
+});
+
 const emily = new ProjectManagers ({
     name: 'Emily',
     age: 32,
     location: 'New York City',
     gender: 'female',
     gradClassName: 'Web2',
-    favInstructor: 'Josh',
+    favInstructor: 'Josh'
+});
+
+const kimberly = new ProjectManagers ({
+    name: 'Kimberly',
+    age: 48,
+    location: 'Austin, Texas',
+    gender: 'female',
+    gradClassName: 'CS10',
+    favInstructor: 'John Doe'
 });
 
 console.log(jane.speak());
@@ -107,8 +126,14 @@ console.log(charles.catchPhrase);
 console.log(charles.favLanguage);
 
 console.log(james.listsSubjects());
-console.log(james.PRAssignment(james, 'web design' ));
-console.log(james.sprintChallenge(james, 'redux'));
+console.log(james.PRAssignment('web design'));
+console.log(james.sprintChallenge('redux'));
+
+console.log(brian.previousBackground);
+console.log(brian.PRAssignment('prototype'));
 
 console.log(emily.standUp('@web19'));
-console.log(emily.debugsCode(james, 'classes'));
+console.log(emily.debugsCode(brian, 'classes'));
+
+console.log(kimberly.location);
+console.log(kimberly.debugsCode(james, 'CSS'))
