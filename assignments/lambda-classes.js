@@ -26,3 +26,22 @@ class Instructor extends Person {
         return `${student.name} receives a perfect score on ${subject}`;
     }
 }
+
+class Student extends Person {
+    constructor(studentAttributes){
+        super(studentAttributes)
+        this.previousBackground = studentAttributes.previousBackground;
+        this.className = studentAttributes.className;
+        this.favSubjects = studentAttributes.favSubjects;
+    }
+    listsSubjects() {
+        return `${this.favSubjects}`; 
+    }
+    PRAssignment(subject) {
+        return `${student.name} has begun spring challenge on ${subject}`;
+    }
+    springChallenge(subject) {
+        return `${student.name} has begun sprint challenge on ${subject}.`;
+    }
+
+}
