@@ -69,6 +69,16 @@ const jane = new Instructor ({
     catchPhrase: 'Talk is cheap. Show me the code'
 });
 
+const charles = new Instructor ({
+    name: 'Charles',
+    age: 35,
+    location: 'Berkley, CA',
+    gender: 'male',
+    specialty: 'JS Node',
+    favLanguage: 'JavaScript',
+    catchPhrase: "If what you've done is stupid but it works, then it really isn't that stupid at all"
+});
+
 const james = new Student ({
     name: 'James',
     age: 20,
@@ -92,6 +102,9 @@ console.log(jane.speak());
 console.log(jane.catchPhrase);
 console.log(jane.demo('How to create classes'));
 console.log(jane.grade(james, 'Sprint-Challenge'));
+
+console.log(charles.catchPhrase);
+console.log(charles.favLanguage);
 
 console.log(james.listsSubjects());
 console.log(james.PRAssignment(james, 'web design' ));
