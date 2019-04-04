@@ -37,10 +37,10 @@ class Student extends Person {
     listsSubjects() {
         return `${this.favSubjects}`; 
     }
-    PRAssignment(subject) {
-        return `${student.name} has begun spring challenge on ${subject}`;
+    PRAssignment(student, subject) {
+        return `${student.name} has submitted a PR for ${subject}`;
     }
-    springChallenge(subject) {
+    sprintChallenge(student, subject) {
         return `${student.name} has begun sprint challenge on ${subject}.`;
     }
 }
@@ -69,7 +69,21 @@ const jane = new Instructor ({
     catchPhrase: 'Talk is cheap. Show me the code'
 });
 
+const james = new Student ({
+    name: 'James',
+    age: 20,
+    location: 'Hawaii',
+    gender: 'male',
+    previousBackground: "Went to college for two years and dropped out",
+    className: 'Web19',
+    favSubjects: 'JavaScript, HTML, CSS'
+});
+
 console.log(jane.speak());
 console.log(jane.catchPhrase);
 console.log(jane.demo('How to create classes'));
-console.log(jane.grade('Josh', 'Sprint-Challenge'))
+console.log(jane.grade(james, 'Sprint-Challenge'));
+
+console.log(james.listsSubjects());
+console.log(james.PRAssignment(james, 'web design' ));
+console.log(james.sprintChallenge(james, 'redux'));
