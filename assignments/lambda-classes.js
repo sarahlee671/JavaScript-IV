@@ -51,11 +51,11 @@ class ProjectManagers extends Person {
         this.gradClassName = pmAttributes.gradClassName;
         this.favInstructor = pmAttributes.favInstructor;
     }
-    standUp() {
-        return `${name} announces to ${channel}, @channel standy times!`;
+    standUp(channel) {
+        return `${this.name} announces to ${channel}, standy times!`;
     }
-    debugsCode() {
-        `${name} dubugs ${student.name}'s code on ${subject}`;
+    debugsCode(student, subject) {
+        return `${this.name} debugs ${student.name}'s code on ${subject}`;
     }
 }
 
@@ -79,6 +79,15 @@ const james = new Student ({
     favSubjects: 'JavaScript, HTML, CSS'
 });
 
+const emily = new ProjectManagers ({
+    name: 'Emily',
+    age: 32,
+    location: 'New York City',
+    gender: 'female',
+    gradClassName: 'Web2',
+    favInstructor: 'Josh',
+});
+
 console.log(jane.speak());
 console.log(jane.catchPhrase);
 console.log(jane.demo('How to create classes'));
@@ -87,3 +96,6 @@ console.log(jane.grade(james, 'Sprint-Challenge'));
 console.log(james.listsSubjects());
 console.log(james.PRAssignment(james, 'web design' ));
 console.log(james.sprintChallenge(james, 'redux'));
+
+console.log(emily.standUp('@web19'));
+console.log(emily.debugsCode(james, 'classes'));
