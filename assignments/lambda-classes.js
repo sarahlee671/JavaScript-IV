@@ -43,5 +43,18 @@ class Student extends Person {
     springChallenge(subject) {
         return `${student.name} has begun sprint challenge on ${subject}.`;
     }
+}
 
+class ProjectManagers extends Person {
+    constructor(pmAttributes){
+        super(pmAttributes)
+        this.gradClassName = pmAttributes.gradClassName;
+        this.favInstructor = pmAttributes.favInstructor;
+    }
+    standUp() {
+        return `${name} announces to ${channel}, @channel standy times!`;
+    }
+    debugsCode() {
+        `${name} dubugs ${student.name}'s code on ${subject}`;
+    }
 }
