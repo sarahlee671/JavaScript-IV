@@ -58,3 +58,18 @@ class ProjectManagers extends Person {
         `${name} dubugs ${student.name}'s code on ${subject}`;
     }
 }
+
+const jane = new Instructor ({
+    name: 'Jane',
+    age: 45,
+    location: 'Spain',
+    gender: 'female',
+    specialty: 'HTML',
+    favLanguage: 'Java',
+    catchPhrase: 'Talk is cheap. Show me the code'
+});
+
+console.log(jane.speak());
+console.log(jane.catchPhrase);
+console.log(jane.demo('How to create classes'));
+console.log(jane.grade('Josh', 'Sprint-Challenge'))
